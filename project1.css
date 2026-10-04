@@ -1,0 +1,62 @@
+body {
+  background-color: #09090b;
+  color: #fafafa;
+  overflow-x: hidden;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Ambient Crimson Mesh */
+.deadpool-mesh {
+  background:
+    radial-gradient(circle at 75% 25%, rgba(225, 29, 72, 0.22) 0%, rgba(136, 19, 55, 0.08) 40%, rgba(9, 9, 11, 0) 70%),
+    radial-gradient(circle at 15% 15%, rgba(190, 18, 60, 0.16) 0%, rgba(9, 9, 11, 0) 55%),
+    radial-gradient(circle at 50% 85%, rgba(244, 63, 94, 0.12) 0%, rgba(9, 9, 11, 0) 60%);
+}
+
+/* Prevent Image Drag */
+.no-drag {
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+}
+
+/* Pill Buttons */
+.pill-button {
+  border: 1px solid #272732;
+  background: #18181f;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.pill-button:hover {
+  border-color: #e11d48;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(225, 29, 72, 0.3);
+}
+
+/* Portfolio Cards */
+.deadpool-card {
+  background-color: #121217;
+  border: 1px solid #272732;
+  transition: all 0.3s ease;
+}
+
+.deadpool-card:hover {
+  border-color: #e11d48;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(225, 29, 72, 0.18);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e11d48;
+  border-radius: 9999px;
+}
