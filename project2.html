@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Aushala Akshitha | AI & ML Engineer</title>
+
+  <link rel="stylesheet" href="project1.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+            signature: ['Caveat', 'cursive'],
+          },
+          colors: {
+            deadpool: {
+              red: '#e11d48',
+              crimson: '#be123c',
+              darkRed: '#881337',
+              black: '#09090b',
+              darkSurface: '#121216',
+              card: '#18181f',
+              border: '#272732',
+              glow: '#f43f5e',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="selection:bg-deadpool-red selection:text-white bg-[#09090b] text-white">
+
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#09090b]/90 backdrop-blur-md border-b border-deadpool-border/80">
+
+    <div class="max-w-7xl mx-auto px-6 sm:px-10 h-20 flex items-center justify-between">
+
+      <a href="#hero" class="flex items-center gap-2.5 group">
+        <span class="w-6 h-[2.5px] bg-deadpool-red group-hover:w-10 transition-all"></span>
+
+        <span class="font-mono text-xs sm:text-sm font-bold uppercase tracking-[0.25em]">
+          AUSHALA AKSHITHA
+          <span class="text-deadpool-red text-base">⚔️</span>
+        </span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-xs font-mono font-semibold tracking-[0.2em] uppercase text-zinc-300">
+
+        <a href="#about" class="hover:text-deadpool-red">ABOUT</a>
+        <a href="#education" class="hover:text-deadpool-red">EDUCATION</a>
+        <a href="#skills" class="hover:text-deadpool-red">SKILLS</a>
+        <a href="#projects" class="hover:text-deadpool-red">PROJECT</a>
+        <a href="#contact" class="hover:text-deadpool-red">CONTACT</a>
+
+      </nav>
+
+      <div class="hidden sm:flex items-center gap-2.5">
+
+        <a href="https://github.com/akshithaaushala-arch/my-portfolio"
+          target="_blank"
+          class="w-9 h-9 rounded-full border border-deadpool-border bg-[#18181f] text-zinc-300 hover:text-deadpool-red hover:border-deadpool-red transition-all flex items-center justify-center">
+
+          <i class="fa-brands fa-github text-sm"></i>
+
+        </a>
+
+        <a href="https://www.linkedin.com/in/Aushala%20Akshitha"
+          target="_blank"
+          class="px-5 py-2 rounded-full text-xs font-mono font-semibold border border-deadpool-red/50 bg-[#18181f] text-deadpool-red hover:bg-deadpool-red hover:text-white transition-all flex items-center gap-2">
+
+          <i class="fa-brands fa-linkedin"></i>
+          <span>LET'S CONNECT</span>
+
+        </a>
+
+      </div>
+
+      <button onclick="toggleMobileMenu()"
+        class="md:hidden text-white text-xl p-2">
+
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+      </button>
+
+    </div>
+
+    <!-- MOBILE MENU -->
+
+    <div id="mobile-menu"
+      class="hidden md:hidden px-6 py-5 bg-[#121216] border-b border-deadpool-border flex flex-col gap-4 text-xs font-mono tracking-widest uppercase text-zinc-300">
+
+      <a href="#about" onclick="toggleMobileMenu()">ABOUT</a>
+      <a href="#education" onclick="toggleMobileMenu()">EDUCATION</a>
+      <a href="#skills" onclick="toggleMobileMenu()">SKILLS</a>
+      <a href="#projects" onclick="toggleMobileMenu()">PROJECT</a>
+      <a href="#contact" onclick="toggleMobileMenu()">CONTACT</a>
+
+      <div class="pt-3 border-t border-deadpool-border/60 flex flex-col gap-2.5">
+
+        <a href="https://github.com/akshithaaushala-arch/my-portfolio"
+          target="_blank"
+          class="text-zinc-200 font-bold">
+
+          <i class="fa-brands fa-github text-deadpool-red"></i>
+          GITHUB REPO
+
+        </a>
+
+        <a href="https://www.linkedin.com/in/Aushala%20Akshitha"
+          target="_blank"
+          class="text-deadpool-red font-bold">
+
+          <i class="fa-brands fa-linkedin"></i>
+          LINKEDIN PROFILE
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- HERO -->
+
+  <section id="hero"
+    class="relative min-h-screen w-full deadpool-mesh flex items-center justify-center pt-28 pb-16 px-6 sm:px-10 lg:px-16 overflow-hidden">
+
+    <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+
+      <div class="lg:col-span-6 flex flex-col justify-center">
+
+        <span class="text-xs sm:text-[13px] font-mono tracking-[0.25em] text-deadpool-red font-bold uppercase mb-4 flex items-center gap-2">
+
+          <span class="w-2.5 h-2.5 rounded-full bg-deadpool-red animate-pulse"></span>
+
+          HI, I'M AUSHALA AKSHITHA
+
+        </span>
+
+        <h1 class="font-display font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-[62px] text-white tracking-tight leading-[1.08] mb-6">
+
+          I BUILD<br>
+          INTELLIGENT<br>
+
+          <span class="text-deadpool-red">
+            AI SYSTEMS.
+          </span>
+
+        </h1>
+
+        <p class="text-zinc-300 text-sm sm:text-base leading-relaxed max-w-lg mb-8">
+
+          Motivated <strong>AI & ML engineering student</strong>
+          with an interest in Artificial Intelligence, Machine Learning,
+          and software development. Eager to develop technical skills,
+          work on real-world projects, and continuously learn emerging technologies.
+
+        </p>
+
+        <div class="flex flex-wrap items-center gap-4">
+
+          <a href="https://www.linkedin.com/in/Aushala%20Akshitha"
+            target="_blank"
+            class="pill-button px-6 py-3 rounded-full flex items-center gap-3 text-xs sm:text-[13px] font-mono font-bold tracking-wider uppercase">
+
+            <span>LINKEDIN CONNECT</span>
+
+            <span class="w-7 h-7 rounded-full bg-deadpool-red text-white flex items-center justify-center">
+
+              <i class="fa-solid fa-arrow-right text-[11px]"></i>
+
+            </span>
+
+          </a>
+
+          <a href="https://github.com/akshithaaushala-arch/my-portfolio"
+            target="_blank"
+            class="pill-button px-6 py-3 rounded-full flex items-center gap-2.5 text-xs sm:text-[13px] font-mono font-bold uppercase">
+
+            <i class="fa-brands fa-github text-base"></i>
+            <span>GITHUB REPO</span>
+
+          </a>
+
+          <a href="#projects"
+            class="pill-button px-6 py-3 rounded-full text-xs sm:text-[13px] font-mono font-bold uppercase">
+
+            VIEW WORK
+
+          </a>
+
+        </div>
+
+        <div class="mt-8 flex flex-wrap items-center gap-3 text-xs font-mono text-zinc-300">
+
+          <a href="mailto:akshithaaushala@gmail.com"
+            class="px-3.5 py-1.5 rounded-full bg-[#18181f] border border-deadpool-border hover:border-deadpool-red flex items-center gap-2">
+
+            <i class="fa-regular fa-envelope text-deadpool-red"></i>
+
+            <span>akshithaaushala@gmail.com</span>
+
+          </a>
+
+          <a href="tel:9866778371"
+            class="px-3.5 py-1.5 rounded-full bg-[#18181f] border border-deadpool-border hover:border-deadpool-red flex items-center gap-2">
+
+            <i class="fa-solid fa-phone text-deadpool-red"></i>
+
+            <span>+91 9866778371</span>
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- PROFESSIONAL GIRL IMAGE -->
+
+      <div class="lg:col-span-6 relative flex justify-center items-end mt-8 lg:mt-0 min-h-[500px]">
+
+        <div class="relative w-full max-w-[490px] flex items-end justify-center">
+
+          <div class="absolute bottom-4 right-2 sm:right-6 w-[340px] sm:w-[410px] h-[450px] sm:h-[510px] rounded-t-full bg-gradient-to-b from-deadpool-red/25 via-deadpool-darkRed/20 to-transparent pointer-events-none -z-10 border-t-2 border-x-2 border-deadpool-red/40 shadow-[0_0_35px_rgba(225,29,72,0.2)]">
+          </div>
+
+          <div class="relative w-full flex items-end justify-center z-10 select-none">
+
+            <img
+              id="akshitha-portrait"
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=85"
+              alt="Aushala Akshitha - AI & ML Student"
+              draggable="false"
+              class="no-drag w-full max-h-[550px] object-contain object-bottom filter contrast-[1.05] drop-shadow-[0_15px_30px_rgba(0,0,0,0.85)] rounded-3xl"
+            />
+
+            <div class="absolute -bottom-3 -left-4 sm:-left-10 w-60 sm:w-72 h-40 bg-[#0c0c0e] rounded-tr-3xl transform -rotate-6 border-t-2 border-r-2 border-deadpool-red/50 shadow-2xl opacity-95 pointer-events-none z-20 flex flex-col justify-between p-3.5 overflow-hidden">
+
+              <div class="w-full h-full bg-[#121217] rounded-tr-2xl border border-deadpool-border p-2.5 flex flex-col justify-between">
+
+                <div class="flex items-center gap-1.5">
+
+                  <span class="w-2 h-2 rounded-full bg-deadpool-red"></span>
+                  <span class="w-2 h-2 rounded-full bg-zinc-600"></span>
+                  <span class="w-2 h-2 rounded-full bg-zinc-700"></span>
+
+                  <span class="text-[9px] font-mono text-deadpool-red font-bold ml-2">
+                    akshitha_ai.py
+                  </span>
+
+                </div>
+
+                <div class="space-y-1 font-mono text-[9px] text-zinc-300">
+
+                  <p>
+                    &lt;<span class="text-deadpool-red font-bold">Engineer</span>
+                    name=<span class="text-white">"Akshitha"</span> /&gt;
+                  </p>
+
+                  <p class="text-zinc-400">
+                    // AI & ML Engineering
+                  </p>
+
+                  <p class="text-deadpool-glow font-semibold">
+                    status: "Learning & Building..."
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="absolute right-0 sm:-right-4 top-1/4 transform rotate-[-7deg] z-30 pointer-events-none">
+
+            <div class="flex flex-col items-center">
+
+              <span class="font-signature text-5xl sm:text-7xl text-white flex items-center gap-2">
+
+                Akshitha
+                <span class="text-3xl sm:text-4xl text-deadpool-red">⚔</span>
+
+              </span>
+
+              <svg class="w-36 sm:w-48 -mt-2 -ml-3"
+                viewBox="0 0 160 25"
+                fill="none">
+
+                <path d="M 5 16 Q 80 26 155 7"
+                  stroke="#e11d48"
+                  stroke-width="3"
+                  stroke-linecap="round"/>
+
+              </svg>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section id="about"
+    class="py-24 px-6 sm:px-12 bg-[#0c0c10] relative border-t border-deadpool-border">
+
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+      <div class="lg:col-span-5">
+
+        <span class="text-xs font-mono tracking-[0.25em] text-deadpool-red uppercase font-bold">
+          ABOUT ME
+        </span>
+
+        <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white mt-2">
+          Driven by AI.<br>
+          Built to Learn.
+        </h2>
+
+        <div class="w-12 h-1 bg-deadpool-red rounded-full mt-4 mb-6"></div>
+
+        <p class="text-zinc-200 text-sm sm:text-base leading-relaxed mb-4">
+
+          Hello! I'm <strong>Aushala Akshitha</strong>,
+          an enthusiastic Artificial Intelligence & Machine Learning
+          engineering student interested in building software solutions
+          and exploring intelligent technologies.
+
+        </p>
+
+        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+
+          I am eager to develop my technical skills, work on real-world
+          projects, and continuously learn emerging technologies.
+
+        </p>
+
+        <div class="flex flex-wrap gap-3">
+
+          <div class="px-4 py-1.5 rounded-full bg-[#18181f] border border-deadpool-border text-xs font-mono">
+
+            <i class="fa-solid fa-language text-deadpool-red"></i>
+            Telugu • English
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+        <div class="deadpool-card p-6 rounded-3xl">
+
+          <div class="w-10 h-10 rounded-2xl bg-deadpool-red/10 border border-deadpool-red/30 flex items-center justify-center text-deadpool-red text-lg mb-3">
+
+            <i class="fa-solid fa-brain"></i>
+
+          </div>
+
+          <div class="text-base font-display font-bold">
+            Problem Solving
+          </div>
+
+          <p class="text-xs text-zinc-400 mt-1.5">
+            Analyzing problems with logical and structured thinking.
+          </p>
+
+        </div>
+
+
+        <div class="deadpool-card p-6 rounded-3xl">
+
+          <div class="w-10 h-10 rounded-2xl bg-deadpool-red/10 border border-deadpool-red/30 flex items-center justify-center text-deadpool-red text-lg mb-3">
+
+            <i class="fa-solid fa-bolt"></i>
+
+          </div>
+
+          <div class="text-base font-display font-bold">
+            Quick Learning
+          </div>
+
+          <p class="text-xs text-zinc-400 mt-1.5">
+            Quickly learning new technologies and tools.
+          </p>
+
+        </div>
+
+
+        <div class="deadpool-card p-6 rounded-3xl">
+
+          <div class="w-10 h-10 rounded-2xl bg-deadpool-red/10 border border-deadpool-red/30 flex items-center justify-center text-deadpool-red text-lg mb-3">
+
+            <i class="fa-solid fa-people-group"></i>
+
+          </div>
+
+          <div class="text-base font-display font-bold">
+            Teamwork
+          </div>
+
+          <p class="text-xs text-zinc-400 mt-1.5">
+            Working effectively with others to achieve common goals.
+          </p>
+
+        </div>
+
+
+        <div class="deadpool-card p-6 rounded-3xl">
+
+          <div class="w-10 h-10 rounded-2xl bg-deadpool-red/10 border border-deadpool-red/30 flex items-center justify-center text-deadpool-red text-lg mb-3">
+
+            <i class="fa-solid fa-comments"></i>
+
+          </div>
+
+          <div class="text-base font-display font-bold">
+            Communication
+          </div>
+
+          <p class="text-xs text-zinc-400 mt-1.5">
+            Communicating ideas clearly and confidently.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- EDUCATION -->
+
+  <section id="education"
+    class="py-24 px-6 sm:px-12 bg-[#09090b] border-t border-deadpool-border">
+
+    <div class="max-w-7xl mx-auto">
+
+      <div class="text-center max-w-2xl mx-auto mb-16">
+
+        <span class="text-xs font-mono tracking-[0.25em] text-deadpool-red uppercase font-bold">
+          ACADEMIC JOURNEY
+        </span>
+
+        <h2 class="text-3xl sm:text-5xl font-display font-black text-white mt-2">
+          Education Background
+        </h2>
+
+      </div>
+
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <div class="deadpool-card p-8 rounded-3xl border-2 border-deadpool-red/50">
+
+          <span class="px-3.5 py-1 rounded-full text-[10px] font-mono font-bold bg-deadpool-red text-white uppercase">
+            Graduation
+          </span>
+
+          <h3 class="text-xl font-display font-bold text-white mt-4 mb-2">
+            AVN Institute of Engineering and Technology
+          </h3>
+
+          <p class="text-deadpool-red font-mono text-xs font-bold uppercase">
+            B.Tech — Artificial Intelligence & Machine Learning
+          </p>
+
+        </div>
+
+
+        <div class="deadpool-card p-8 rounded-3xl">
+
+          <span class="px-3.5 py-1 rounded-full text-[10px] font-mono font-bold bg-[#1e1e26] text-zinc-300 uppercase">
+            Intermediate
+          </span>
+
+          <h3 class="text-xl font-display font-bold text-white mt-4 mb-2">
+            New Masterminds Junior College
+          </h3>
+
+          <p class="text-zinc-300 font-mono text-xs font-bold uppercase">
+            Intermediate Education
+          </p>
+
+        </div>
+
+
+        <div class="deadpool-card p-8 rounded-3xl">
+
+          <span class="px-3.5 py-1 rounded-full text-[10px] font-mono font-bold bg-[#1e1e26] text-zinc-300 uppercase">
+            School
+          </span>
+
+          <h3 class="text-xl font-display font-bold text-white mt-4 mb-2">
+            Sloka The School
+          </h3>
+
+          <p class="text-zinc-300 font-mono text-xs font-bold uppercase">
+            School Education
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SKILLS -->
+
+  <section id="skills"
+    class="py-24 px-6 sm:px-12 bg-[#0c0c10] border-t border-deadpool-border">
+
+    <div class="max-w-7xl mx-auto text-center">
+
+      <span class="text-xs font-mono tracking-[0.25em] text-deadpool-red uppercase font-bold">
+        TECHNICAL SKILLS
+      </span>
+
+      <h2 class="text-3xl sm:text-5xl font-display font-black mt-2">
+        My Skill Set
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+
+        <div class="deadpool-card p-6 rounded-3xl">
+          <i class="fa-solid fa-code text-deadpool-red text-3xl"></i>
+          <h3 class="font-bold mt-4">Programming</h3>
+          <p class="text-zinc-400 text-sm mt-2">
+            C • Python • Java
+          </p>
+        </div>
+
+        <div class="deadpool-card p-6 rounded-3xl">
+          <i class="fa-solid fa-globe text-deadpool-red text-3xl"></i>
+          <h3 class="font-bold mt-4">Web</h3>
+          <p class="text-zinc-400 text-sm mt-2">
+            HTML • CSS • JavaScript
+          </p>
+        </div>
+
+        <div class="deadpool-card p-6 rounded-3xl">
+          <i class="fa-solid fa-database text-deadpool-red text-3xl"></i>
+          <h3 class="font-bold mt-4">Database</h3>
+          <p class="text-zinc-400 text-sm mt-2">
+            SQL
+          </p>
+        </div>
+
+        <div class="deadpool-card p-6 rounded-3xl">
+          <i class="fa-brands fa-github text-deadpool-red text-3xl"></i>
+          <h3 class="font-bold mt-4">Tools</h3>
+          <p class="text-zinc-400 text-sm mt-2">
+            Git • GitHub • VS Code
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROJECTS -->
+
+  <section id="projects"
+    class="py-24 px-6 sm:px-12 bg-[#09090b] border-t border-deadpool-border">
+
+    <div class="max-w-7xl mx-auto text-center">
+
+      <span class="text-xs font-mono tracking-[0.25em] text-deadpool-red uppercase font-bold">
+        PROJECTS
+      </span>
+
+      <h2 class="text-3xl sm:text-5xl font-display font-black mt-2">
+        My Work
+      </h2>
+
+      <div class="deadpool-card p-8 rounded-3xl mt-12 max-w-2xl mx-auto">
+
+        <i class="fa-solid fa-laptop-code text-deadpool-red text-4xl"></i>
+
+        <h3 class="text-2xl font-display font-bold mt-4">
+          AI & ML Portfolio
+        </h3>
+
+        <p class="text-zinc-400 text-sm mt-3">
+          A personal portfolio showcasing my technical skills,
+          education, projects, and professional profile.
+        </p>
+
+        <a href="https://github.com/akshithaaushala-arch/my-portfolio"
+          target="_blank"
+          class="inline-flex mt-6 px-6 py-3 rounded-full bg-deadpool-red font-mono text-xs font-bold">
+
+          VIEW GITHUB
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section id="contact"
+    class="py-24 px-6 sm:px-12 bg-[#0c0c10] border-t border-deadpool-border">
+
+    <div class="
